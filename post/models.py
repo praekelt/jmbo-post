@@ -1,5 +1,5 @@
 from django.core.urlresolvers import reverse
-from panya.models import ModelBase
+from jmbo.models import ModelBase
 from ckeditor.fields import RichTextField
 
 class Post(ModelBase):

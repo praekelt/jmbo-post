@@ -1,8 +1,8 @@
 from django.core.urlresolvers import reverse
 
 from post.models import Post
-from panya.generic.views import GenericObjectDetail, GenericObjectList 
-from panya.view_modifiers import DefaultViewModifier
+from jmbo.generic.views import GenericObjectDetail, GenericObjectList 
+from jmbo.view_modifiers import DefaultViewModifier
 
 class ObjectList(GenericObjectList):
     def get_extra_context(self, *args, **kwargs):
