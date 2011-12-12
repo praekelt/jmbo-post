@@ -29,4 +29,4 @@ verify truncates where needed." % i,
             },
         })
 
-    load_json(objects)
+    return objects

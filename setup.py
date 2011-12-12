@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='jmbo-post',
-    version='0.0.3',
+    version='0.0.4',
     description='Jmbo post app.',
     long_description = open('README.rst', 'r').read(),
     author='Praekelt Foundation',
@@ -12,6 +12,7 @@ setup(
     packages = find_packages(),
     install_requires = [
         'django-ckeditor',
+        'django-generate',
         'jmbo',
     ],
     tests_require=[
