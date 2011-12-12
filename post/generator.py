@@ -1,7 +1,6 @@
 import random
 
 from generate import IMAGES
-from generate.json_loader import load_json
 
 POST_COUNT = 20
 
