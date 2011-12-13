@@ -1,7 +1,6 @@
 import random
 
 from generate import IMAGES
-from generate.json_loader import load_json
 
 POST_COUNT = 20
 
@@ -29,4 +28,4 @@ verify truncates where needed." % i,
             },
         })
 
-    load_json(objects)
+    return objects
