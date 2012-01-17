@@ -1,4 +1,5 @@
 from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
 
 from post.models import Post
 from jmbo.generic.views import GenericObjectDetail, GenericObjectList
@@ -7,7 +8,7 @@ from jmbo.view_modifiers import DefaultViewModifier
 
 class ObjectList(GenericObjectList):
     def get_extra_context(self, *args, **kwargs):
-        return {'title': 'Posts'}
+        return {'title': _('Posts')}
 
     def get_view_modifier(self, request, *args, **kwargs):
         return DefaultViewModifier(request, *args, **kwargs)
