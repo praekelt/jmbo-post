@@ -1,0 +1,1 @@
+Remove post_detail.html since it is the same as modelbase_detail.html

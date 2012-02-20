@@ -12,6 +12,3 @@ class Post(ModelBase):
     class Meta():
         verbose_name = 'Post'
         verbose_name_plural = 'Posts'
-
-    def get_absolute_url(self):
-        return reverse('post_object_detail', kwargs={'slug': self.slug})
