@@ -1,1 +1,18 @@
-[{"pk": 0, "model": "photologue.photosize", "fields": {"name": "post_large", "watermark": null, "increment_count": false, "effect": null, "crop": true, "height": 151, "width": 269, "upscale": true, "pre_cache": false, "quality": 70}}]
+[
+    {
+        "pk": null, 
+        "model": "photologue.photosize", 
+        "fields": {
+            "name": "post_detail", 
+            "watermark": null, 
+            "increment_count": false, 
+            "effect": null, 
+            "crop": true, 
+            "height": 240, 
+            "width": 320, 
+            "upscale": true, 
+            "pre_cache": false, 
+            "quality": 70
+        }
+    }
+]
