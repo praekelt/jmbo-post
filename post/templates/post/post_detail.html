@@ -1,21 +1,5 @@
-{% extends "base.html" %}
-{% load jmbo_inclusion_tags post_inclusion_tags %} 
+{% extends "jmbo/modelbase_detail.html" %}
 
-{% block content %}
-    <div class="page section_posts object-detail post-detail">
-
-        {% if view_modifier %}
-    	    <div class="title">
-	    	    {{ title }}
-		    </div>      
-            {% view_modifier view_modifier %}
-        {% endif %}
-
-        {% object_header object %}
-        
-        {% post_detail object %}
-
-        {% object_comments object %}
-
-	</div>
-{% endblock %}
+{% comment %}
+This entire template to be removed when template resolution is fixed
+{% endcomment %}
