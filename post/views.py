@@ -32,7 +32,7 @@ class ObjectDetail(GenericObjectDetail):
     def get_view_modifier(self, request, *args, **kwargs):
         return DefaultViewModifier(
             request,
-            base_url=reverse("post_object_list"),
+            base_url=reverse("object_list", args=['post', 'post']),
             ignore_defaults=True,
             *args,
             **kwargs
