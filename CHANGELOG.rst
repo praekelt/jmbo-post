@@ -5,4 +5,4 @@ Changelog
 -------------------
 #. Unomena contributions.
 #. Only show content type title if view modifiers are available.
-#. Add Afrikaans translation.
+#. Add Afrikaans and French translation.
