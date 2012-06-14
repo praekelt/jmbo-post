@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.1
+---
+#. django-tastypie support added.
+
 0.0.6
 -----
 #. Unomena contributions.
