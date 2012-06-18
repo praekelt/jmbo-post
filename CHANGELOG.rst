@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.1.1
+-----
+#. Use slug for lookups in tastypie API.
+
 0.1
 ---
 #. django-tastypie support added.
