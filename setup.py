@@ -13,7 +13,7 @@ setup(
     install_requires = [
         'django-ckeditor',
         'django-generate',
-        'jmbo',
+        'jmbo>=0.3',
     ],
     tests_require=[
         'django-setuptest',
