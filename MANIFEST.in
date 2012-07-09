@@ -1,6 +1,7 @@
-include AUTHORS
-include LICENSE
+include AUTHORS.rst
+include CHANGELOG.rst
 include README.rst
+include LICENSE
 recursive-include post/fixtures *
 recursive-include post/templates *
 recursive-include post/templatetags *
