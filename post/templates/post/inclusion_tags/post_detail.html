@@ -1,6 +1,8 @@
 <div class="post rich object-detail-inclusion post-detail-inclusion">
-    {% if not '<img' in object.content %}
+    <div class="image">
         <img src="{{ object.image_detail_url }}" />
-    {% endif %}
-    {{ object.content|safe }}
+    </div>
+    <div class="content">
+        {{ object.content|safe }}
+    </div>
 </div>
