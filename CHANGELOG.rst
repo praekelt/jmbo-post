@@ -1,8 +1,8 @@
 Changelog
 =========
 
-next
-----
+0.1.4
+-----
 #. Remove redundant photosize.
 #. Wrapping div around image and content on detail view.
 
