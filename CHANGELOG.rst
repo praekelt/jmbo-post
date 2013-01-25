@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.1.5
+-----
+#. Non-critical fix release. Missed a clearing div at the bottom of a template.
+
 0.1.4
 -----
 #. Remove redundant photosize.
