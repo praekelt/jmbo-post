@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.1.4
+-----
+#. Remove redundant photosize.
+#. Wrapping div around image and content on detail view.
+
 0.1.3
 -----
 # Corrected MANIFEST.in to include missing setup.py rst files.
