@@ -1,6 +1,10 @@
 Changelog
 =========
 
+next
+----
+#. Add caching to detail template.
+
 0.1.6
 -----
 #. Do not show main image if images uploaded via CKEditor.
