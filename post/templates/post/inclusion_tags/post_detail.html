@@ -1,8 +1,8 @@
 {% extends "jmbo/inclusion_tags/modelbase_detail.html" %}
-{% load cache %}
+{% load jmbo_template_tags %}
 
 {% block content %}
-    {% cache 3600 'object-detail-inclusion' object.id object.modified %}
+    {% jmbocache 3600 'object-detail-inclusion' object.id object.modified %}
         {% if '<img' not in object.content %}
         <div class="image">
             <img src="{{ object.image_detail_url }}" />
@@ -11,5 +11,5 @@
         <div class="content">
             {{ object.content|safe }}
         </div>
-    {% endcache %}
+    {% endjmbocache %}
 {% endblock %}
