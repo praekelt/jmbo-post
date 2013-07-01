@@ -1,8 +1,8 @@
 Changelog
 =========
 
-next
-----
+0.1.7
+-----
 #. Add caching to detail template.
 
 0.1.6
