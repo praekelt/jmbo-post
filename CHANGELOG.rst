@@ -1,6 +1,10 @@
 Changelog
 =========
 
+next
+----
+#. Allow pagination of posts.
+
 0.1.7
 -----
 #. Add caching to detail template.

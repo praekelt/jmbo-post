@@ -1,15 +1,21 @@
 {% extends "jmbo/inclusion_tags/modelbase_detail.html" %}
-{% load jmbo_template_tags %}
+{% load jmbo_template_tags pagination_tags %}
 
 {% block content %}
-    {% jmbocache 3600 'object-detail-inclusion' object.id object.modified %}
-        {% if '<img' not in object.content %}
-        <div class="image">
-            <img src="{{ object.image_detail_url }}" />
-        </div>
-        {% endif %}
-        <div class="content">
-            {{ object.content|safe }}
-        </div>
+    {% jmbocache 3600 'object-detail-inclusion' object.id object.modified request.page %}
+        {% with object.content_pages as content_pages %}
+            {% autopaginate content_pages 1 %}
+
+            {% if '<img' not in object.content %}
+                <div class="image">
+                    <img src="{{ object.image_detail_url }}" />
+                </div>
+            {% endif %}
+            <div class="content">
+                <a name="jmbo-post"></a>
+                {{ content_pages.0|safe }}
+            </div>
+            {% paginate hashtag='#jmbo-post' %}
+        {% endwith %}
     {% endjmbocache %}
 {% endblock %}
