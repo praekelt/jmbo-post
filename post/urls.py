@@ -8,6 +8,6 @@ from post.api import PostResource
 v1_api.register(PostResource())
 
 urlpatterns = patterns(
-    'post.views',
-    url(r'^(?P<slug>[\w-]+)/$', 'object_detail', name='post_object_detail'),
+    '',
+    url(r'^(?P<slug>[\w-]+)/$', 'post.views.object_detail', name='post_object_detail'),
 )

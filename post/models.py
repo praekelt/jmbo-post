@@ -7,6 +7,8 @@ from jmbo.models import ModelBase
 
 
 class Post(ModelBase):
+    autosave_fields = ('content',)
+
     content = RichTextField(
         blank=True,
         null=True,
