@@ -9,5 +9,5 @@ v1_api.register(PostResource())
 
 urlpatterns = patterns(
     '',
-    url(r'^(?P<slug>[\w-]+)/$', 'post.views.object_detail', name='post_object_detail'),
+    url(r'^(?P<slug>[\w-]+)/$', 'jmbo.views.object_detail', name='post_object_detail'),
 )

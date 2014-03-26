@@ -4,6 +4,7 @@ Changelog
 next
 ----
 #. Allow pagination of posts.
+#. Deprecate redundant views and use default Jmbo views.
 
 0.1.7
 -----
