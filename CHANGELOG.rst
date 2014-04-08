@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.3
+---
+#. Allow pagination of posts.
+#. Deprecate redundant views and use default Jmbo views.
+
 0.1.7
 -----
 #. Add caching to detail template.
