@@ -1,6 +1,11 @@
 Changelog
 =========
 
+next
+----
+#. Tests!
+#. Up minimum required `jmbo` to 1.1.1.
+
 0.3
 ---
 #. Allow pagination of posts.

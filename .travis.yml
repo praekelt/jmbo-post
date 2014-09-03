@@ -14,6 +14,6 @@ install:
   - pip install -r post/tests/requirements.txt --use-mirrors
 
 before_script:
-    - psql -U postgres -c "create database jmbo_twitter encoding 'UTF8'"
+    - psql -U postgres -c "create database jmbo_post encoding 'UTF8'"
 
 script: python setup.py test
