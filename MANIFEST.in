@@ -6,3 +6,4 @@ recursive-include post/fixtures *
 recursive-include post/templates *
 recursive-include post/templatetags *
 recursive-include post/locale *
+recursive-include post/tests *

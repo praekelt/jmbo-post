@@ -13,14 +13,14 @@ setup(
     install_requires = [
         'django-ckeditor>=4.0.2',
         'django-generate',
-        'jmbo>=1.0.8',
+        'jmbo>=1.1.1',
         'beautifulsoup4',
         'django-pagination',
     ],
     tests_require=[
-        'django-setuptest',
+        'django-setuptest>=0.1.4',
     ],
-    test_suite='setuptest.SetupTestSuite',
+    test_suite='setuptest.setuptest.SetupTestSuite',
     include_package_data=True,
     classifiers = [
         "Programming Language :: Python",
