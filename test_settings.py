@@ -1,3 +1,7 @@
+# We're still on Django 1.4 and use django-setuptest. Use this as a starting
+# point for your test settings. Typically copy this file as test_settings.py
+# and replace myapp with your app name.
+
 from os.path import expanduser
 
 DEBUG = True
@@ -15,20 +19,22 @@ DATABASES = {
 
 INSTALLED_APPS = (
     'post',
-    'django.contrib.auth',
-    'django.contrib.comments',
-    'django.contrib.contenttypes',
-    'django.contrib.sites',
-    'django.contrib.admin',
-    'category',
     'jmbo',
     'photologue',
+    'category',
     'likes',
     'secretballot',
     'pagination',
     'publisher',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.comments',
+    'django.contrib.contenttypes',
+    'django.contrib.sites',
     'south',
 )
+
+ROOT_URLCONF = 'post.tests.urls'
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -61,4 +67,7 @@ CKEDITOR_UPLOAD_PATH = expanduser('~')
 
 SOUTH_TESTS_MIGRATE = False
 
-ROOT_URLCONF = 'post.tests.urls'
+# Disable celery
+CELERY_ALWAYS_EAGER = True
+BROKER_BACKEND = 'memory'
+
