@@ -2,6 +2,10 @@ Jmbo Post
 =========
 **Jmbo post application. Post is a synonym for article. It is the most common content type.**
 
+.. figure:: https://travis-ci.org/praekelt/jmbo-post.svg?branch=develop
+   :align: center
+   :alt: Travis
+
 .. contents:: Contents
     :depth: 5
 
