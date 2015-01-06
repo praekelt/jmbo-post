@@ -11,8 +11,7 @@ setup(
     url='http://github.com/praekelt/jmbo-post',
     packages = find_packages(),
     install_requires = [
-        'django-ckeditor>=4.0.2',
-        'django-generate',
+        'django-ckeditor>=4.2.1',
         'jmbo>=1.1.1',
         'beautifulsoup4',
         'django-pagination',
