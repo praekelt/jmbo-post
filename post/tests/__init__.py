@@ -33,3 +33,7 @@ class TestCase(BaseTestCase):
     def test_pagination(self):
         response = self.client.get(self.post.get_absolute_url())
         self.failUnless('<a href="?page=2#jmbo-post"' in response.content)
+
+    def test_admin_add(self):
+        response = self.client.get("/admin/post/post/add/")
+        self.assertEquals(response.status_code, 200)
