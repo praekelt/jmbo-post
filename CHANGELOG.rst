@@ -1,10 +1,10 @@
 Changelog
 =========
 
-next
-----
+0.4
+---
 #. Tests!
-#. Up minimum required `jmbo` to 1.1.1.
+#. Up minimum required `jmbo` to 1.2.0.
 
 0.3
 ---
