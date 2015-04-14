@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='jmbo-post',
-    version='0.3',
+    version='0.4',
     description='Jmbo post application. Post is a synonym for article. It is the most common content type.',
     long_description = open('README.rst', 'r').read() + open('AUTHORS.rst', 'r').read() + open('CHANGELOG.rst', 'r').read(),
     author='Praekelt Foundation',
@@ -13,14 +13,14 @@ setup(
     install_requires = [
         'django-ckeditor>=4.0.2',
         'django-generate',
-        'jmbo>=1.0.8',
+        'jmbo>=1.2.0',
         'beautifulsoup4',
         'django-pagination',
     ],
     tests_require=[
-        'django-setuptest',
+        'django-setuptest>=0.1.4',
     ],
-    test_suite='setuptest.SetupTestSuite',
+    test_suite='setuptest.setuptest.SetupTestSuite',
     include_package_data=True,
     classifiers = [
         "Programming Language :: Python",
