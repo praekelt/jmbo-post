@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='jmbo-post',
-    version='2.0.0a1',
+    version='2.0.0a2',
     description='Jmbo post application. Post is a synonym for article. It is the most common content type.',
     long_description = open('README.rst', 'r').read() + open('AUTHORS.rst', 'r').read() + open('CHANGELOG.rst', 'r').read(),
     author='Praekelt Foundation',
