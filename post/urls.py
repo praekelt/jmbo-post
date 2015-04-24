@@ -13,6 +13,11 @@ v1_api.register(PostResource())
 urlpatterns = patterns(
     '',
     url(
+        r'^(?P<category_slug>[\w-]+)/(?P<slug>[\w-]+)/$',
+        ObjectDetail.as_view(),
+        name='post_categorized_object_detail'
+    ),
+    url(
         r'^(?P<slug>[\w-]+)/$',
         ObjectDetail.as_view(),
         name='post_object_detail'
