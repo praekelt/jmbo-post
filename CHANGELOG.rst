@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.0.0a1
+-------
+#. Up minimum required `jmbo` to 2.0.0.
+
 0.4
 ---
 #. Tests!
