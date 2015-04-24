@@ -1,6 +1,7 @@
-from django.conf.urls.defaults import patterns, url
+from django.conf.urls import patterns, include, url
 
 from jmbo.urls import v1_api
+from jmbo.views import ObjectDetail
 
 from post.api import PostResource
 
@@ -13,12 +14,12 @@ urlpatterns = patterns(
     '',
     url(
         r'^(?P<category_slug>[\w-]+)/(?P<slug>[\w-]+)/$',
-        'jmbo.views.object_detail',
+        ObjectDetail.as_view(),
         name='post_categorized_object_detail'
     ),
     url(
         r'^(?P<slug>[\w-]+)/$',
-        'jmbo.views.object_detail',
+        ObjectDetail.as_view(),
         name='post_object_detail'
     ),
 )
