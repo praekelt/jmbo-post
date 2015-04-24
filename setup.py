@@ -12,7 +12,7 @@ setup(
     packages = find_packages(),
     install_requires = [
         'django-ckeditor>=4.2.1',
-        'jmbo==2.0.0a1',
+        'jmbo==2.0.0a2',
         'beautifulsoup4',
     ],
     tests_require=[
