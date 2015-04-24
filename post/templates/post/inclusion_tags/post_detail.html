@@ -7,12 +7,14 @@
             {% autopaginate content_pages 1 %}
 
             {% if '<img' not in object.content %}
-                <div class="image">
-                    <img src="{{ object.image_detail_url }}" />
-                    {% if object.image_attribution %}
-                        <div class="attribution">{{ object.image_attribution }}</div>
-                    {% endif %}
-                </div>
+                {% if object.image %}
+                    <div class="image">
+                        <img src="{{ object.image_detail_url }}" />
+                        {% if object.image_attribution %}
+                            <div class="attribution">{{ object.image_attribution }}</div>
+                        {% endif %}
+                    </div>
+                {% endif %}
             {% endif %}
             <div class="content">
                 <a name="jmbo-post"></a>

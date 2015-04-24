@@ -19,17 +19,22 @@ DATABASES = {
 
 INSTALLED_APPS = (
     'post',
+    'ckeditor',
     'jmbo',
     'photologue',
     'category',
     'likes',
     'secretballot',
+
     'pagination',
     'publisher',
+    'sites_groups',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.comments',
     'django.contrib.contenttypes',
+    'django.contrib.sessions',
     'django.contrib.sites',
     'south',
 )
