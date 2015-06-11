@@ -1,6 +1,10 @@
 Changelog
 =========
 
+next
+----
+#. Simplify API to use primary keys.
+
 2.0.0a1
 -------
 #. Up minimum required `jmbo` to 2.0.0.
