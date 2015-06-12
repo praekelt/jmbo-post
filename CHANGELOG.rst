@@ -1,9 +1,10 @@
 Changelog
 =========
 
-next
-----
+2.0.0
+-----
 #. Simplify API to use primary keys.
+#. Stabilize on Jmbo 2.0.0.
 
 2.0.0a1
 -------
