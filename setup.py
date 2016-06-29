@@ -12,19 +12,14 @@ setup(
     packages = find_packages(),
     install_requires = [
         'django-ckeditor>=4.2.1',
-        'jmbo>=2.0.0',
+        #'jmbo>=3.0.0', uncomment when released
         'beautifulsoup4',
     ],
-    tests_require=[
-        'django-setuptest>=0.1.4',
-        'psycopg2',
-    ],
-    test_suite='setuptest.setuptest.SetupTestSuite',
     include_package_data=True,
     classifiers = [
         "Programming Language :: Python",
         "License :: OSI Approved :: BSD License",
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Operating System :: OS Independent",
         "Framework :: Django",
         "Intended Audience :: Developers",

@@ -1,8 +1,8 @@
 {% extends "jmbo/inclusion_tags/modelbase_detail.html" %}
-{% load jmbo_template_tags pagination_tags %}
+{% load jmbo_template_tags pagination_tags ultracache_tags %}
 
 {% block content %}
-    {% jmbocache 3600 'object-detail-inclusion' object.id object.modified request.page %}
+    {% ultracache 3600 'object-detail-inclusion' object.id object.modified request.page %}
         {% with object.content_pages as content_pages %}
             {% autopaginate content_pages 1 %}
 
@@ -20,7 +20,11 @@
                 <a name="jmbo-post"></a>
                 {{ content_pages.0|safe }}
             </div>
+            {% comment %}
+            django-pagination-fork 1.0.17 can't handle the hashtag argument yet
             {% paginate hashtag='#jmbo-post' %}
+            {% endcomment %}
+            {% paginate %}
         {% endwith %}
-    {% endjmbocache %}
+    {% endultracache %}
 {% endblock %}
