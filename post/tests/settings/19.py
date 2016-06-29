@@ -101,3 +101,7 @@ DEBUG = True
 ULTRACACHE = {"invalidate": False}
 
 CKEDITOR_UPLOAD_PATH = expanduser("~")
+
+REST_FRAMEWORK = {
+    "DEFAULT_VERSIONING_CLASS": "rest_framework.versioning.URLPathVersioning"
+}
