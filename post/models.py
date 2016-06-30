@@ -26,7 +26,7 @@ class Post(ModelBase):
     def content_pages(self):
         marker = "--m-a-r-k-er--"
         soup = BeautifulSoup(self.content)
-        elems = soup.find_all("div", attrs={"style": "page-break-after: always;"})
+        elems = soup.find_all("hr")
         for elem in elems:
             elem.replace_with(marker)
         return soup.renderContents().split(marker)

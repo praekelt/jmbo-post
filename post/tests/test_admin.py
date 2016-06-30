@@ -24,13 +24,12 @@ class AdminTestCase(unittest.TestCase):
         )
         cls.editor.set_password("password")
         cls.editor.save()
-        cls.client.login(username='editor', password='password')
+        cls.client.login(username="editor", password="password")
 
         # Post
         obj, dc = Post.objects.get_or_create(
-            title='Post',
-            content='aaaa <div style="page-break-after: always;"></div>bbb',
-            owner=cls.editor, state='published',
+            title="Post",
+            owner=cls.editor, state="published",
         )
         obj.sites = [1]
         obj.save()
