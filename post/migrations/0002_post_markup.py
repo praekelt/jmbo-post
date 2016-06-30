@@ -8,8 +8,6 @@ from django.db import migrations, models
 
 
 def html_to_markdown(apps, schema_editor):
-    # Doing a path check will raise an exception if pandoc is not installed
-    pypandoc.get_pandoc_path()
     Post = apps.get_model("post", "post")
     for obj in Post.objects.all():
         if obj.content:
