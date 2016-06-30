@@ -1,22 +1,26 @@
+import markdown
 from bs4 import BeautifulSoup
 
+from django.db import models
 from django.core.urlresolvers import reverse
+
 from ckeditor.fields import RichTextField
 
 from jmbo.models import ModelBase
 
 
 class Post(ModelBase):
-    autosave_fields = ("content",)
+    autosave_fields = ("markdown",)
 
-    content = RichTextField(
-        blank=True,
-        null=True,
-    )
+    markdown = models.TextField(null=True, blank=True)
 
     class Meta:
         verbose_name = "Post"
         verbose_name_plural = "Posts"
+
+    @property
+    def content(self):
+        return markdown.markdown(self.markdown)
 
     @property
     def content_pages(self):

@@ -14,6 +14,8 @@ setup(
         'django-ckeditor>=4.2.1',
         #'jmbo>=3.0.0', uncomment when released
         'beautifulsoup4',
+        'pypandoc',
+        'markdown',
     ],
     include_package_data=True,
     classifiers = [
