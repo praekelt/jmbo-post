@@ -13,22 +13,22 @@ class PropertiesMixin(Serializer):
         fields = ("content", "content_pages")
 
 
-class HyperlinkedModelBaseSerializer(
-    PropertiesMixin, jmbo_api.HyperlinkedModelBaseSerializer
+class PostSerializer(
+    PropertiesMixin, jmbo_api.ModelBaseSerializer
     ):
 
-    class Meta(jmbo_api.HyperlinkedModelBaseSerializer.Meta):
+    class Meta(jmbo_api.ModelBaseSerializer.Meta):
         pass
 
 
 class PostObjectsViewSet(jmbo_api.ModelBaseObjectsViewSet):
     queryset = Post.objects.all()
-    serializer_class = HyperlinkedModelBaseSerializer
+    serializer_class = PostSerializer
 
 
 class PostPermittedViewSet(jmbo_api.ModelBasePermittedViewSet):
     queryset = Post.permitted.all()
-    serializer_class = HyperlinkedModelBaseSerializer
+    serializer_class = PostSerializer
 
 
 def register(router):
