@@ -51,3 +51,4 @@ bbb""",
         self.assertEqual(response.status_code, 200)
         self.failUnless("content" in as_json)
         self.failUnless("content_pages" in as_json)
+        self.failUnless("/post-post-permitted/" in as_json["url"])
