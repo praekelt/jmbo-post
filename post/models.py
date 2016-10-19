@@ -24,6 +24,8 @@ class Post(ModelBase):
 
     @property
     def content_pages(self):
+        if not self.content:
+            return ""
         marker = "--m-a-r-k-er--"
         soup = BeautifulSoup(self.content)
         elems = soup.find_all("hr")
