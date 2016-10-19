@@ -7,11 +7,11 @@ urlpatterns = [
     url(
         r"^(?P<category_slug>[\w-]+)/(?P<slug>[\w-]+)/$",
         ObjectDetail.as_view(),
-        name="post-post-detail"
+        name="post-detail"
     ),
     url(
         r"^(?P<slug>[\w-]+)/$",
         ObjectDetail.as_view(),
-        name="post-post-categorized-detail"
+        name="post-categorized-detail"
     ),
 ]
