@@ -9,7 +9,7 @@
             {% if '<img' not in object.content %}
                 {% if object.image %}
                     <div class="image">
-                        <img src="{{ object.image_detail_url }}" />
+                        <img src="{{ object.get_image_detail_url }}" />
                         {% if object.image_attribution %}
                             <div class="attribution">{{ object.image_attribution }}</div>
                         {% endif %}
