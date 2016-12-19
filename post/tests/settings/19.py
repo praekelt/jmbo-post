@@ -24,6 +24,7 @@ INSTALLED_APPS = (
     "category",
     "ckeditor",
     "django_comments",
+    "layers",
     "likes",
     "secretballot",
     "pagination",
