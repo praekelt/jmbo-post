@@ -1,12 +1,11 @@
+sudo: false
 language: python
 
 env:
   - TOXENV=django19
+  - TOXENV=django111
 
 install:
   - pip install tox
-
-before_script:
-    - psql -U postgres -c "create database jmbo encoding 'UTF8'"
 
 script: tox

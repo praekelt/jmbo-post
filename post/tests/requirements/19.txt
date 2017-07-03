@@ -6,7 +6,6 @@
 
 Django==1.9.6
 django-category==1.9
-django-ckeditor==4.5.1
 django-contrib-comments==1.7.1
 django-export==1.9
 #django-likes==0.2

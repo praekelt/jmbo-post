@@ -17,7 +17,6 @@ urlpatterns = [
     url(r"^admin/", include(admin.site.urls)),
     url(r'^api/(?P<version>(v1))/', include(router.urls)),
     url(r"^jmbo/", include("jmbo.urls", namespace="jmbo")),
-    url(r"^ckeditor/", include("ckeditor.urls")),
     url(r"^post/", include("post.urls", namespace="jmbo")),
     url(r"^comments/", include("django_comments.urls")),
 ]

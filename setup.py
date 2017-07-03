@@ -11,7 +11,7 @@ setup(
     url="http://github.com/praekelt/jmbo-post",
     packages = find_packages(),
     install_requires = [
-        #"jmbo>=3.0.0", uncomment when released
+        "jmbo>=3.0.0",
         "beautifulsoup4",
         "pypandoc",
         "markdown",
