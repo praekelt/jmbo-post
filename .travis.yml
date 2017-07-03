@@ -1,19 +1,11 @@
-addons:
-    postgresql: "9.1"
-
+sudo: false
 language: python
 
-python:
-  - "2.7"
-
 env:
-  - DJANGO=Django==1.6.8
+  - TOXENV=django19
+  - TOXENV=django111
 
 install:
-  - pip install -q $DJANGO --use-mirrors
-  - pip install -r post/tests/requirements.txt --use-mirrors
+  - pip install tox
 
-before_script:
-    - psql -U postgres -c "create database jmbo encoding 'UTF8'"
-
-script: python setup.py test
+script: tox

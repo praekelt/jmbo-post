@@ -1,25 +1,17 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 
-from jmbo.urls import v1_api
 from jmbo.views import ObjectDetail
 
-from post.api import PostResource
 
-
-v1_api.register(PostResource())
-
-# xxx: may need to include ckeditor urls here. check!
-
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(
-        r'^(?P<category_slug>[\w-]+)/(?P<slug>[\w-]+)/$',
+        r"^(?P<category_slug>[\w-]+)/(?P<slug>[\w-]+)/$",
         ObjectDetail.as_view(),
-        name='post_categorized_object_detail'
+        name="post-categorized-detail"
     ),
     url(
-        r'^(?P<slug>[\w-]+)/$',
+        r"^(?P<slug>[\w-]+)/$",
         ObjectDetail.as_view(),
-        name='post_object_detail'
+        name="post-detail"
     ),
-)
+]
