@@ -1,8 +1,8 @@
 Changelog
 =========
 
-next
-----
+3.0.0
+-----
 #. Jmbo 3 and Django 1.9 compatibility.
 #. Store content as markdown, not HTML anymore.
 
