@@ -18,7 +18,9 @@ class ViewsTestCase(unittest.TestCase):
         # Post
         obj, dc = Post.objects.get_or_create(
             title="Post",
-            content="""aaaa <div style="page-break-after: always;"></div>bbb""",
+            markdown="""aaaa
+***
+bbb""",
             state="published",
         )
         obj.sites = [1]
