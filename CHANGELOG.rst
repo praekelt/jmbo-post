@@ -1,6 +1,10 @@
 Changelog
 =========
 
+next
+----
+#. Add missing migrations.
+
 3.0.0
 -----
 #. Jmbo 3 and Django 1.9 compatibility.
