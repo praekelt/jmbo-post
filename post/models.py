@@ -2,7 +2,7 @@ import markdown
 from bs4 import BeautifulSoup
 
 from django.db import models
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 from simplemde.fields import SimpleMDEField
 
@@ -31,4 +31,4 @@ class Post(ModelBase):
         elems = soup.find_all("hr")
         for elem in elems:
             elem.replace_with(marker)
-        return soup.renderContents().split(marker)
+        return soup.encode_contents().decode("utf-8").split(marker)

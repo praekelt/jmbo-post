@@ -1,19 +1,18 @@
-import unittest
-
-from django.core.urlresolvers import reverse
 from django.contrib.auth import get_user_model
-from django.test.client import Client, RequestFactory
+from django.test import TestCase
+
+from django.urls import reverse
 
 from jmbo.models import Relation
 
 from post.models import Post
 
 
-class ViewsTestCase(unittest.TestCase):
+class ViewsTestCase(TestCase):
 
     @classmethod
-    def setUpClass(cls):
-        cls.client = Client()
+    def setUpTestData(cls):
+        super(ViewsTestCase, cls).setUpTestData()
 
         # Post
         obj, dc = Post.objects.get_or_create(
@@ -23,7 +22,8 @@ class ViewsTestCase(unittest.TestCase):
 bbb""",
             state="published",
         )
-        obj.sites = [1]
+        obj.save()
+        obj.sites.set([1])
         obj.save()
         cls.post = obj
 
@@ -31,4 +31,4 @@ bbb""",
         response = self.client.get(self.post.get_absolute_url())
         # django-pagination-fork 1.0.17 can"t handle the hashtag argument yet
         #self.failUnless("<a href="?page=2#jmbo-post"" in response.content)
-        self.failUnless("<a href=\"?page=2\"" in response.content)
+        self.failUnless("<a href=\"?page=2\"" in response.content.decode("utf-8"))

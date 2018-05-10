@@ -8,7 +8,7 @@ TIME_ZONE = "Africa/Johannesburg"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "ENGINE": "django.db.backends.postgresql",
         "NAME": "jmbo",
         "USER": "postgres",
         "PASSWORD": "",
@@ -27,7 +27,7 @@ INSTALLED_APPS = (
     "likes",
     "secretballot",
     "simplemde",
-    "pagination",
+    "dj_pagination",
     "preferences",
     "ultracache",
     "sites_groups",
@@ -40,14 +40,14 @@ INSTALLED_APPS = (
 
 ROOT_URLCONF = "post.tests.urls"
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     "django.middleware.common.CommonMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "likes.middleware.SecretBallotUserIpUseragentMiddleware",
-    "pagination.middleware.PaginationMiddleware",
+    "dj_pagination.middleware.PaginationMiddleware",
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

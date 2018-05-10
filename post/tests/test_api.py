@@ -36,7 +36,8 @@ class APITestCase(unittest.TestCase):
 bbb""",
             state="published",
         )
-        obj.sites = [1]
+        obj.save()
+        obj.sites.set([1])
         obj.save()
         cls.post = obj
 
@@ -47,7 +48,7 @@ bbb""",
         response = self.client.get(
             "/api/v1/post-post-permitted/%s/" % self.post.pk
         )
-        as_json = json.loads(response.content)
+        as_json = response.json()
         self.assertEqual(response.status_code, 200)
         self.failUnless("content" in as_json)
         self.failUnless("content_pages" in as_json)

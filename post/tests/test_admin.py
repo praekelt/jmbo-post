@@ -1,8 +1,8 @@
 import unittest
 
-from django.core.urlresolvers import reverse
 from django.contrib.auth import get_user_model
 from django.test.client import Client, RequestFactory
+from django.urls import reverse
 
 from jmbo.models import Relation
 
@@ -31,7 +31,8 @@ class AdminTestCase(unittest.TestCase):
             title="Post",
             owner=cls.editor, state="published",
         )
-        obj.sites = [1]
+        obj.save()
+        obj.sites.set([1])
         obj.save()
         cls.post = obj
 
@@ -60,4 +61,4 @@ class AdminTestCase(unittest.TestCase):
     def test_admin_relation(self):
         self.client.login(username="editor", password="password")
         response = self.client.get("/admin/post/post/add/")
-        self.failUnless("Post posts" in response.content)
+        self.failUnless("Post posts" in response.content.decode("utf-8"))
